@@ -20,12 +20,12 @@
  <bean id="userDAO" class="com.springbook.biz.user.impl.UserDAO"/> -->
  <bean id="log" class="com.springbook.biz.common.Log4jAdvice"></bean>
  <bean id="before" class="com.springbook.biz.common.BeforeAdvice"></bean>
- <bean id="afterReturning" class="com.springbook.biz.common.AfterReturningAdvice"></bean>
+ <bean id="getPointcut" class="com.springbook.biz.common.AfterReturningAdvice"></bean>
  <aop:config>
  	<aop:pointcut id="allPointcut" expression="execution(* com.springbook.biz..*Impl.*(..))"/>
  	<aop:pointcut id="getPointcut" expression="execution(* com.springbook.biz..*Impl.get*(..))"/>
- 	<aop:aspect ref="afterReturning">
- 		<aop:after pointcut-ref="getPointcut" method="afterLog"/>
+ 	<aop:aspect ref="getPointcut">
+ 		<aop:before pointcut-ref="getPointcut" method="afterLog"/>
  	</aop:aspect>
  </aop:config>
 </beans>
