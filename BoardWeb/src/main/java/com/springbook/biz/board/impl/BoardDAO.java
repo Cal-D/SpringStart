@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
 import com.springbook.biz.board.BoardVO;
 import com.springbook.biz.common.JDBCUtil;
