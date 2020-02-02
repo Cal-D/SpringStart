@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.springbook.biz.user.UserVO;
 
-@Service
+//@Service
 @Aspect
 public class AfterReturningAdvice {
 	@Pointcut("execution(* com.springbook.biz..*Impl.get*(..))")
