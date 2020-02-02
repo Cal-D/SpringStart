@@ -2,5 +2,6 @@
 
 > DI 완료.  
 > AOP 완료  
+> JDBC 완료.  
 
-JDBC 진행중.
+Transaction 진행중.
