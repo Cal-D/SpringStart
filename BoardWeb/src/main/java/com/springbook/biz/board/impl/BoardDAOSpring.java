@@ -14,9 +14,9 @@ import org.springframework.stereotype.Repository;
 
 import com.springbook.biz.board.BoardVO;
 
-//@Repository("boardDAO")
+@Repository("boardDAO")
 public class BoardDAOSpring {
-	//@Autowired
+	@Autowired
 	private JdbcTemplate jdbcTemplate;
 	
 	private final String BOARD_INSERT = "insert into board(seq,title,writer,content) values((select nvl(max(seq),0)+1 from board),?,?,?)";
