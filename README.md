@@ -6,5 +6,7 @@
 > Transaction 완료.
 > model 1완료.  
 > model 2완료.  
- 
-Spring MVC 진행중. 
+>Spring MVC 완료.
+>검색기능 완료.  
+
+파일 업로드 진행중 

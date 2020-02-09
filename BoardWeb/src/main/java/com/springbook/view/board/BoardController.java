@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.springbook.biz.board.BoardService;
 import com.springbook.biz.board.BoardVO;
+import com.springbook.biz.board.impl.BoardDAO;
 
 @SessionAttributes("board")
 @Controller
@@ -52,7 +53,8 @@ public class BoardController {
 								defaultValue = "",required = false) String keyword,
 										BoardVO vo, Model model) {
 		System.out.println("글 목록 검색 처리");
-
+		if(vo.getSearchCondition() == null) vo.setSearchCondition("TITLE");
+		if(vo.getSearchKeyword() == null) vo.setSearchKeyword("");
 		model.addAttribute("boardList",boardService.getBoardList(vo));
 		return "getBoardList.jsp";
 	}
